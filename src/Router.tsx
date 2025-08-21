@@ -1,15 +1,24 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Container } from '@mantine/core';
 import LeaguePage from './pages/League/League.page';
 import ListPage from './pages/List/List.page';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <ListPage />,
+    element: (
+      <Container h="100vh" p="md">
+        <ListPage />
+      </Container>
+    ),
   },
   {
     path: '/leagues/:id',
-    element: <LeaguePage />,
+    element: (
+      <Container h="100vh" p="md">
+        <LeaguePage />
+      </Container>
+    ),
   },
 ]);
 
